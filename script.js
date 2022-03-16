@@ -17,9 +17,17 @@ class TicTacToe {
             [2, 5 ,8],
         ]
     }
+
+    get displayBoard() {
+        console.log(`${this.board[0]} | ${this.board[1]} | ${this.board[2]}`)
+        console.log('----------')
+        console.log(`${this.board[3]} | ${this.board[4]} | ${this.board[5]}`)
+        console.log('----------')
+        console.log(`${this.board[6]} | ${this.board[7]} | ${this.board[8]}`)
+    }
 }
 
-let game1 = new TicTacToe()
+let game = new TicTacToe()
 console.log('GAME STARTED')
-console.log(game1.board)
+console.log(game1.displayBoard)
 console.log(game1.winningCombinations)
