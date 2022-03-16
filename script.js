@@ -31,10 +31,16 @@ class TicTacToe {
     }
 
     positionTaken(index) {
-        return this.board[index] === index ? false : 'Spot taken'
+        return this.board[index] === index ? false : true
     }
 
-    
+    get turnCount() {
+        return this.board.length - this.board.filter(index => index !== 'X' && index !== 'O').length
+    }
+
+    get currentPlayer() {
+        return this.turnCount % 2 ? 'O' : 'X'
+    }
 }
 
 let game = new TicTacToe()
@@ -43,5 +49,9 @@ console.log(game.displayBoard)
 console.log(game.winningCombinations)
 game.move(0, game.playerOne)
 game.move(1, game.playerTwo)
+// game.move(8, game.playerOne)
+// game.move(6, game.playerTwo)
 console.log(game.displayBoard)
 console.log(game.positionTaken(1))
+console.log(game.turnCount)
+console.log(game.currentPlayer)
