@@ -30,6 +30,10 @@ class TicTacToe {
         return this.board[index] = player
     }
 
+    positionTaken(index) {
+        return this.board[index] === index ? false : 'Spot taken'
+    }
+
     
 }
 
@@ -40,3 +44,4 @@ console.log(game.winningCombinations)
 game.move(0, game.playerOne)
 game.move(1, game.playerTwo)
 console.log(game.displayBoard)
+console.log(game.positionTaken(1))
