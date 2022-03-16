@@ -25,9 +25,18 @@ class TicTacToe {
         console.log('----------')
         console.log(`${this.board[6]} | ${this.board[7]} | ${this.board[8]}`)
     }
+
+    move(index, player) {
+        return this.board[index] = player
+    }
+
+    
 }
 
 let game = new TicTacToe()
 console.log('GAME STARTED')
-console.log(game1.displayBoard)
-console.log(game1.winningCombinations)
+console.log(game.displayBoard)
+console.log(game.winningCombinations)
+game.move(0, game.playerOne)
+game.move(1, game.playerTwo)
+console.log(game.displayBoard)
